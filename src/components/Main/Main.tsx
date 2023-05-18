@@ -52,10 +52,11 @@ export const Main: FC = () => {
 
     let newTitle;
     const handleUpdateItem = async (e: MouseEvent<HTMLButtonElement>, id: number) => {
-        let newTitle = posts.map(item => {
+        newTitle = posts.map(item => {
             if (item.id === Number(id)) {
                 return item.title
             }
+            return null
         })
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
             method: 'PATCH',

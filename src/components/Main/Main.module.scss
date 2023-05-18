@@ -111,4 +111,20 @@
     }
 }
 
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+    .main {
+        width: 100vw;
+
+        .mainContent {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            justify-content: center;
+
+            .postBlock {
+                .postInputsBlock {
+                    margin: 10px 0 0 0;
+                }
+            }
+        }
+    }
+}
